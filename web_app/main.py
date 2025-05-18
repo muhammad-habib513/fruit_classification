@@ -15,7 +15,10 @@ app = FastAPI()
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://fruit-classification-3sft.vercel.app",  # Actual deployed Vercel frontend URL
+        "http://localhost:5173"  # Vite dev server
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
